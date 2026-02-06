@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>POMI Chatbot — Política de Privacidad</title>
+  <meta name="description" content="Política de Privacidad de POMI Chatbot (Proyecto de Orientación y Mantenimiento Inteligente)." />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1b33;
+      --muted:#9fb0d0;
+      --text:#eaf0ff;
+      --accent:#3ea6ff;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:16px;
+      --max:980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      background:
+        radial-gradient(1100px 700px at 20% -20%, rgba(62,166,255,.18), transparent 60%),
+        radial-gradient(900px 650px at 120% 10%, rgba(62,166,255,.12), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+    header{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.70);
+      border-bottom:1px solid var(--border);
+    }
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 0;
+    }
+    .brand{display:flex; align-items:center; gap:10px}
+    .logo{
+      width:34px; height:34px; border-radius:12px;
+      background: linear-gradient(135deg, #3ea6ff, #7c4dff);
+      box-shadow: 0 10px 25px rgba(62,166,255,.12);
+    }
+    .brandTitle{font-weight:800; letter-spacing:.2px}
+    .brandSub{font-size:12px; color:var(--muted); margin-top:-2px}
+    .tools{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+    .btn{
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      cursor:pointer;
+      font-size:13px;
+    }
+    .btn:hover{background: rgba(255,255,255,.06)}
+    main{padding:26px 0 56px}
+    .card{
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    h1{
+      margin:0 0 6px;
+      font-size: clamp(24px, 2.8vw, 34px);
+      letter-spacing:-.25px;
+    }
+    .meta{
+      display:flex; flex-wrap:wrap; gap:10px;
+      color:var(--muted); font-size:13px;
+      margin-bottom:10px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 10px; border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color:var(--muted);
+    }
+    .dot{
+      width:8px; height:8px; border-radius:99px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(62,166,255,.12);
+    }
+
+    .toc{
+      margin-top:14px;
+      padding:12px;
+      border-radius:14px;
+      border:1px dashed rgba(255,255,255,.16);
+      background: rgba(255,255,255,.02);
+    }
+    .toc strong{color:var(--text)}
+    .toc a{
+      display:inline-block;
+      margin:8px 8px 0 0;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      font-size:13px;
+    }
+    .toc a:hover{background: rgba(255,255,255,.06); text-decoration:none}
+
+    section{
+      margin-top:14px;
+      padding:18px;
+      border-radius: var(--radius);
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.02);
+    }
+    h2{
+      margin:0 0 8px;
+      font-size:16px;
+      letter-spacing:-.1px;
+    }
+    p{margin:0 0 10px; color:var(--muted)}
+    ul{margin:0; padding-left:18px; color:var(--muted)}
+    li{margin:6px 0}
+    .hint{
+      font-family: var(--mono);
+      font-size:12px;
+      color: rgba(159,176,208,.9);
+      background: rgba(255,255,255,.02);
+      border:1px solid rgba(255,255,255,.10);
+      padding:10px;
+      border-radius: 12px;
+      overflow:auto;
+    }
+    footer{
+      border-top:1px solid var(--border);
+      padding:18px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+    @media print{
+      header, .tools, .toc {display:none !important;}
+      body{background:#fff; color:#000}
+      .card, section{box-shadow:none; border:1px solid #ddd}
+      p, ul{color:#222}
+      a{color:#000; text-decoration:underline}
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div class="brandTitle">POMI Chatbot</div>
+          <div class="brandSub">Política de Privacidad</div>
+        </div>
+      </div>
+
+      <div class="tools">
+        <button class="btn" onclick="window.print()">Imprimir / PDF</button>
+        <button class="btn" onclick="navigator.clipboard?.writeText(window.location.href)">Copiar enlace</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="card">
+    <h1>Política de Privacidad — POMI Chatbot</h1>
+
+    <div class="meta">
+      <span class="pill">Última actualización: <strong style="color:var(--text)">06 de febrero de 2026</strong></span>
+    </div>
+
+    <p>
+      Esta Política describe cómo <strong>POMI </strong>
+      trata los datos personales cuando interactúas con el asistente conversacional y sus módulos asociados.
+    </p>
+
+    <div class="toc" aria-label="Tabla de contenidos">
+      <strong>Contenido</strong><br/>
+      <a href="#alcance">1. Alcance</a>
+      <a href="#datos">2. Datos tratados</a>
+      <a href="#finalidades">3. Finalidades</a>
+      <a href="#baselegal">4. Base legal</a>
+      <a href="#ia">5. Uso de IA</a>
+      <a href="#canales">6. Canales (WhatsApp)</a>
+      <a href="#conservacion">7. Conservación</a>
+      <a href="#terceros">8. Terceros</a>
+      <a href="#internacional">9. Transferencias</a>
+      <a href="#seguridad">10. Seguridad</a>
+      <a href="#derechos">11. Derechos</a>
+      <a href="#cambios">12. Cambios</a>
+
+    </div>
+
+    <div class="hint" style="margin-top:14px">
+      Campos a completar: [Nombre/Razón Social], [RUC/DNI], [Dirección], [País], [Correo privacidad].
+    </div>
+  </div>
+
+
+  <section id="alcance">
+    <h2>1. Alcance</h2>
+    <p>
+      Esta Política aplica al tratamiento de datos personales realizado a través de POMI Chatbot, incluyendo su uso en
+      canales como web, WhatsApp u otros medios de mensajería integrados, así como módulos asociados
+      (por ejemplo, gestión de tickets, formularios o paneles administrativos).
+    </p>
+  </section>
+
+  <section id="datos">
+    <h2>2. Datos personales que tratamos</h2>
+    <p>Según el canal y el uso, POMI Chatbot puede tratar:</p>
+    <ul>
+      <li><strong>Identificación y contacto:</strong> nombre (si lo proporcionas), correo, teléfono/WhatsApp.</li>
+      <li><strong>Identificadores internos:</strong> ID de usuario, código de estudiante/cliente u otros (si aplica).</li>
+      <li><strong>Conversaciones:</strong> mensajes enviados/recibidos, fecha/hora y contexto necesario para responder.</li>
+      <li><strong>Tickets:</strong> descripción, categoría, estado e historial de atención.</li>
+      <li><strong>Adjuntos:</strong> archivos que compartas para soporte (si está habilitado).</li>
+      <li><strong>Datos técnicos:</strong> logs, auditoría, eventos de seguridad; en web, datos del navegador e IP aproximada (si aplica).</li>
+    </ul>
+    <p><strong>Recomendación:</strong> evita enviar contraseñas, datos bancarios o información sensible (salud, etc.).</p>
+  </section>
+
+  <section id="finalidades">
+    <h2>3. Finalidades del tratamiento</h2>
+    <p>Tratamos datos personales para:</p>
+    <ul>
+      <li><strong>Prestación del servicio:</strong> comprender y responder consultas.</li>
+      <li><strong>Gestión de tickets:</strong> derivar y dar seguimiento cuando se requiera atención humana.</li>
+      <li><strong>Mejora del servicio:</strong> métricas de calidad, análisis de uso, optimización y corrección de errores.</li>
+      <li><strong>Seguridad:</strong> prevención de abuso/fraude, control de accesos, auditoría y trazabilidad.</li>
+      <li><strong>Comunicaciones operativas:</strong> estado de ticket, confirmaciones y avisos del servicio.</li>
+    </ul>
+  </section>
+
+  <section id="baselegal">
+    <h2>4. Base legal</h2>
+    <p>El tratamiento se sustenta en una o más bases legales, según corresponda:</p>
+    <ul>
+      <li><strong>Ejecución de una relación contractual</strong> o provisión del servicio solicitado.</li>
+      <li><strong>Consentimiento</strong> cuando sea requerido.</li>
+      <li><strong>Interés legítimo</strong> para seguridad, auditoría y mejora del servicio, respetando derechos del usuario.</li>
+      <li><strong>Cumplimiento de obligaciones legales</strong> cuando resulte aplicable.</li>
+    </ul>
+  </section>
+
+  <section id="ia">
+    <h2>5. Uso de Inteligencia Artificial</h2>
+    <p>
+      POMI Chatbot puede utilizar tecnologías de IA (por ejemplo, modelos de lenguaje o NLU) para interpretar mensajes
+      y generar respuestas. Esto implica procesar el contenido textual que el usuario envía con fines operativos.
+    </p>
+    <p>
+      Aplicamos medidas razonables como minimización de datos, controles de acceso, monitoreo y uso de información
+      con fines operativos y de mejora.
+    </p>
+    <p>
+      Si tu implementación integra proveedores externos de IA, estos pueden actuar como encargados de tratamiento
+      y el procesamiento podría implicar transferencias internacionales.
+    </p>
+  </section>
+
+  <section id="canales">
+    <h2>6. Canales de mensajería (por ejemplo, WhatsApp)</h2>
+    <p>
+      Si interactúas con POMI Chatbot mediante WhatsApp u otra plataforma de terceros, tu interacción también está sujeta
+      a las políticas del proveedor del canal. POMI Chatbot trata tu identificador del canal (por ejemplo, número de teléfono)
+      y mensajes para responder y dar seguimiento.
+    </p>
+  </section>
+
+  <section id="conservacion">
+    <h2>7. Conservación de los datos</h2>
+    <p>Conservamos los datos por el tiempo estrictamente necesario para las finalidades descritas y/o exigencias legales.</p>
+    <ul>
+      <li><strong>Conversaciones:</strong> por un periodo limitado para soporte, auditoría y mejora (p. ej., 90–365 días, configurable).</li>
+      <li><strong>Tickets:</strong> mientras dure la atención y un periodo posterior (p. ej., 1–3 años, configurable).</li>
+      <li><strong>Logs técnicos:</strong> usualmente 30–180 días, salvo incidentes.</li>
+    </ul>
+    <p>Luego, los datos se eliminan o anonimizan, salvo obligación legal de conservación.</p>
+  </section>
+
+  <section id="terceros">
+    <h2>8. Compartición de datos y encargados de tratamiento</h2>
+    <p>
+      Podemos compartir datos con proveedores necesarios para operar el servicio (hosting, almacenamiento, mensajería, monitoreo y/o IA),
+      bajo obligaciones de confidencialidad y seguridad.
+    </p>
+    <p><strong>POMI no vende datos personales.</strong></p>
+  </section>
+
+  <section id="internacional">
+    <h2>9. Transferencias internacionales</h2>
+    <p>
+      Algunos proveedores tecnológicos pueden alojar o procesar datos fuera de tu país. En esos casos aplicamos salvaguardas
+      razonables mediante acuerdos y medidas técnicas/organizativas para proteger los datos.
+    </p>
+  </section>
+
+  <section id="seguridad">
+    <h2>10. Seguridad</h2>
+    <p>Implementamos medidas razonables para proteger los datos personales, como:</p>
+    <ul>
+      <li>cifrado en tránsito (HTTPS) cuando aplica;</li>
+      <li>control de accesos y roles;</li>
+      <li>auditoría y monitoreo de eventos;</li>
+      <li>respaldos y recuperación según el despliegue.</li>
+    </ul>
+    <p>
+      Ningún sistema es 100% infalible, pero trabajamos para reducir riesgos y responder ante incidentes.
+    </p>
+  </section>
+
+  <section id="derechos">
+    <h2>11. Derechos del usuario</h2>
+    <p>Según la normativa aplicable, puedes solicitar:</p>
+    <ul>
+      <li>acceso, rectificación y eliminación;</li>
+      <li>oposición o limitación del tratamiento;</li>
+      <li>portabilidad (cuando aplique);</li>
+      <li>retiro del consentimiento (cuando aplique).</li>
+    </ul>
+    <p>
+      Para ejercerlos, escribe a <strong>[privacidadPOMI@outlook.com]</strong> con el asunto “Privacidad — Solicitud”
+      e incluye tu identificación y detalle del pedido.
+    </p>
+  </section>
+
+  <section id="cambios">
+    <h2>12. Cambios a esta política</h2>
+    <p>
+      Podemos actualizar esta política para reflejar cambios del servicio o legales. Publicaremos la versión vigente
+      en esta página con su fecha de actualización.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    © <span id="y"></span> POMI Chatbot — Política de Privacidad
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
